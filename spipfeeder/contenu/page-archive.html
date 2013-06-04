@@ -1,0 +1,7 @@
+#CACHE{24*3600*7}
+[(#SET{lien_navigation,#URL_PAGE{archive}})]
+[(#ENV{date}|affdate{Y}|>{#CONFIG{feeder/annee}}|oui)
+	#INCLURE{fond=modeles/minical/mois,date,lien_navigation=#URL_PAGE{archive}|parametre_url{id_rubrique,#ENV{id_rubrique}}|parametre_url{id_syndic,#ENV{id_syndic}},id_rubrique,id_syndic}
+]
+[<div id="desc_commun">(#CHEMIN{inclure/desc_commun}|oui)#INCLURE{fond=inclure/desc_commun}</div>]
+<INCLURE{fond=inclure/articles_syndics,date,id_syndic,id_rubrique,page}>

@@ -1,0 +1,56 @@
+<?php
+        @header('Content-type: text/xml[; charset=(#CHARSET)]');
+        echo '<'.'?xml version="1.0" encoding="#CHARSET"?'.">\n";
+?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<channel>
+	<title>[(#NOM_SITE_SPIP|texte_backend)]</title>
+	<link>#URL_SITE_SPIP</link>
+
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>[(#NOM_SITE_SPIP|texte_backend)]</ShortName>
+  <Description> [(#NOM_SITE_SPIP|texte_backend)] Les news libres du nouveau monde .</Description>
+  <Tags>free news information libre independante</Tags>
+  <Contact>feeder@waisse.org</Contact>
+  <Url type="application/rss+xml" 
+       template="http://feeder.ww7.be/?q={searchTerms}&amp;pw={startPage?}&amp;format=rss"/>
+</OpenSearchDescription>
+
+        <managingEditor>feeder@waisse.org</managingEditor>
+	<description>Les news libres du nouveau monde [RC:1bec7cb5]</description>
+	<language>#LANG</language>
+
+	<image>
+		<title>[(#NOM_SITE_SPIP|texte_backend)]</title>
+		<url>#URL_SITE_SPIP[/(#LOGO_SITE_SPIP||extraire_attribut{src})]</url>
+		<link>#URL_SITE_SPIP/</link>
+		<description></description>
+	</image>
+
+	<BOUCLE_10recents(SYNDIC_ARTICLES){id_syndic?}{id_rubrique?}{par date}{inverse}{0,20}{unique}>
+		<item>
+		<title>[(#TITRE|texte_backend|texte_script)]</title>
+		<link>#URL_ARTICLE</link>
+		<description>[(#DESCRIPTIF|texte_backend|texte_script)]</description>
+		<dc:date>[(#DATE|date_iso)]</dc:date>
+		<dc:format>text/html</dc:format>
+		<dc:language>#LANG</dc:language>
+		<dc:creator>[(#LESAUTEURS|texte_backend)]</dc:creator>
+		</item>
+	</BOUCLE_10recents>
+	<BOUCLE_tres_recents(SYNDIC_ARTICLES){id_syndic?}{id_rubrique?}{par date}{inverse}{age<2}{0,17}{unique}>
+		<item>
+		<title>[(#TITRE|texte_backend)]</title>
+		<link>#URL_ARTICLE</link>
+		<description>[(#DESCRIPTIF|texte_backend)]</description>
+		<dc:date>[(#DATE|date_iso)]</dc:date>
+		<dc:format>text/html</dc:format>
+		<dc:language>#LANG</dc:language>
+		<dc:creator>[(#LESAUTEURS|texte_backend)]</dc:creator>
+		</item>
+	</BOUCLE_tres_recents>
+
+</channel>
+
+</rss>

@@ -1,0 +1,19 @@
+#ENV*{bloc_ancre}
+#SET{bornes,#ENV{page_courante}|bornes_pagination{#ENV{nombre_pages},0}}
+#SET{premiere, #GET{bornes}|reset}
+#SET{derniere, #GET{bornes}|end}
+#SET{pages,#GET{premiere}|range{#GET{derniere}}}
+#SET{separateur,#ENV{separateur,''}}
+<B_pages>
+<BOUCLE_pages(POUR){tableau #GET{pages}}>
+#SET{debut,#VALEUR|moins{1}|mult{#ENV{pas}}|plus{1}}
+#SET{fin,#VALEUR|mult{#ENV{pas}}|plus{1}}
+
+[(#SET{item, #VALEUR|moins{1}|mult{#ENV{pas}} })]
+
+[(#SET{debut_fin,[(#GET{debut})]-[(#GET{fin})]})]
+
+[&#91;(#ENV{url}|parametre_url{#ENV{debut},#GET{item}}|ancre_url{#ENV{ancre}}|aoustrong{#GET{debut_fin},#VALEUR|=={#ENV{page_courante}},lien_pagination,'',nofollow})&#93;]
+[<span class='sep separateur'>(#VALEUR|<{#GET{derniere}}|?{#GET{separateur}})</span>]
+</BOUCLE_pages>
+</B_pages>

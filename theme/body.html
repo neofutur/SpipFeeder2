@@ -1,0 +1,27 @@
+<div id="page">
+	<div id="entete">
+		<div id="titres">
+		<INCLURE{fond=inclure/entete,env}>
+		</div>
+		<div id="navinterne">#INCLURE{fond=inclure/menu, env, identifiant=navinterne}</div>
+	</div>
+	<div id="nav">
+		<INCLURE{fond=inclure/barre-nav,env}>
+	</div>
+	
+	<div id="conteneur">	
+		<div id="contenu">
+			<INCLURE{fond=contenu/#ENV{type},env}>
+		</div>
+
+		<div id="navigation">
+			<INCLURE{fond=navigation/#ENV{type},env}>
+			<INCLURE{fond=extra/#ENV{type},env}>
+		</div>
+		<div class="clear" />
+	</div>
+
+	<div id="pied">
+		<INCLURE{fond=inclure/pied,env}>
+	</div>
+</div>

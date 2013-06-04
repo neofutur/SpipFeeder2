@@ -1,0 +1,15 @@
+<B_sites>
+
+<h3 class="h3"><:feeder:carnet_inscrits:></h3>
+<ul class='menu-liste'>
+<BOUCLE_sites(SITES) {par nom_site} {tout}>
+	<li class="menu-entree"><a href="#URL_PAGE{site,id_syndic=#ID_SYNDIC}"[ title="(#DESCRIPTIF|attribut_html)"]>#NOM_SITE</a></li>
+</BOUCLE_sites>
+
+</ul>
+</B_sites>
+
+<h3 class="h3"><:feeder:syndication:></h3>
+<ul class="menu-liste">
+<li class="menu-entree"><a href="#URL_PAGE{backend}"><:feeder:syndication:></a></li>
+</ul>

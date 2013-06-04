@@ -1,0 +1,20 @@
+<plugin>
+
+    <nom> Spipfeeder - Squelette </nom>
+	<licence>GPL</licence>
+    <categorie>squelette</categorie>
+    <auteur> Maïeul Rouquette et Spipeurs Neoskills </auteur>
+    <version>2.0</version>
+    <options>spipfeeder_options.php</options>
+  
+    <etat>dev</etat>
+
+    <description> Les NewsLibres du monde libre</description>
+      <prefix>feeder</prefix>
+
+	<necessite id="Z" version="[1.7.0;1.7.99]" />
+	<necessite id="menus" />
+	<necessite id="Calendrier" />
+	<necessite id="spip_bonux" />
+	<utilise id="CFG" />
+</plugin>

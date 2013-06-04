@@ -1,0 +1,32 @@
+[(#CHEMIN{inclure/before_menu.html}|oui)
+<INCLURE{fond=inclure/before_menu}>
+]
+<BOUCLE_site(SITES){id_syndic}>
+#SET{id_rubrique,#ID_RUBRIQUE}
+</BOUCLE_site>
+<B_rubriques>
+<h3 class="h3"><:feeder:rubriques_inscrits:></h3>
+	<ul class="menu-liste">
+	<BOUCLE_rubriques(RUBRIQUES) {par num titre} {par titre}>
+    <li class="menu-entree"><a href="#URL_RUBRIQUE">#TITRE</a>
+    	<B_sites>
+    	<ul class="menu-liste">
+    	<BOUCLE_sites(SITES){id_rubrique}{id_rubrique=#ENV{id_rubrique,#GET{id_rubrique}}}{par nom_site}{par nom_site}>
+    	<li class="menu-entree"><a href="#URL_PAGE{site,id_syndic=#ID_SYNDIC}"[ title="(#DESCRIPTIF|attribut_html)"]>#NOM_SITE</a></li>
+    	</BOUCLE_sites>
+    	</ul>
+    	</B_sites>
+    	
+    </li>
+    </BOUCLE_rubriques>
+	</ul>
+</B_rubriques>
+[(#CHEMIN{inclure/menu_perso.html}|oui)
+<INCLURE{fond=inclure/menu_perso}>
+]
+[(#CHEMIN{inclure/menu_backend.html}|oui)
+<INCLURE{fond=inclure/menu_backend}>
+]
+[(#CHEMIN{inclure/menu_certificats.html}|oui)
+<INCLURE{fond=inclure/menu_certificats}>
+]

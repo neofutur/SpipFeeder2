@@ -1,0 +1,268 @@
+/* Découpage général des blocs */
+body{
+	background-color:#333;
+	font-family: verdana, sans-serif;
+	margin:1em;
+}
+
+#entete{
+	background: #25509F url('img/bandeau.jpg') no-repeat 0% 100%;
+	height:4em;
+	text-align: right;
+}
+
+
+#contenu{
+	font-size:0.80em;
+	background-color:#777;
+	float:right;
+	width: 76%;	
+	padding:10px;
+}
+
+#conteneur{
+	background-color:#666;
+	padding-top: 7px;
+}
+
+#nav{
+	font-size:110%;
+	text-align:center;
+	background-color:black;
+	padding:5px;
+}
+#navigation{
+	background-color:#777;
+	float:left;
+	width:21%;
+	margin-bottom:5px;
+}
+
+#pied{
+	text-align:center;	
+}
+
+/* Les titres */
+h1,h2,h3,h4{
+	margin:0;
+	padding:0;
+}
+h1, h2{
+	color:#ffffff;
+}
+h3{
+	color:#FC0;
+}
+.menu-entree {
+	color:#99FF66;
+}
+h4{
+	padding-bottom: 0.5ex;
+	line-height: 1.4em;
+	color:#FC0;
+	border-bottom:1px solid #AAA;
+	font-size:0.8em;
+}
+	/* Notamment ceux du bandeau */
+
+	#titres{
+		float: left;
+		font-size: 1.2em;
+		font-weight: bold;
+		letter-spacing: -0.02em;
+		line-height: 0.75em;
+		padding: 1em 30px 0px 2em;
+		margin-left:9px;
+		text-align: right;
+		text-transform: uppercase;
+	}
+	h1{
+		font-size:100%;	
+	}
+	/* Le slogan */
+	#slogan{
+		color:red;
+		font-size: 0.7em;
+		letter-spacing: 0.07em;
+		line-height: 1.2em;
+	}
+/* Liens */
+#navinterne a{
+	color:#ffffff;
+}
+a.spip_in, a, a.spip_out{
+	color:#FC0;
+	text-decoration:none;
+}
+a.spip_in:hover, a:hover,  a.spip_out:hover {
+	color: #DDD;
+	background-color: #888;
+  	border-bottom: 1px solid #EEEEEE;	
+}
+
+h4 a{
+	border-bottom: 1px solid #AAA;	
+}
+#navigation a:hover {
+	border-bottom:none;	
+}
+
+/*paginations */
+.pagination{
+	color:#ffffff;
+}
+.on{
+	font-weight:normal;
+}
+/*Navigation interne d'en haut*/
+
+#navinterne ul,#navinterne li,#navinterne div{
+	display:inline;
+	margin:0;
+	padding:0;
+	font-size:0.833em;
+}
+#navinterne ul{
+	background-color:#333;
+	border-top:1px solid #333;	
+}
+#navinterne li{
+	border-bottom:1px solid #333;
+	border-left:1px solid #333;
+	padding: 5px 10px;
+	font-size:0.9ex;
+	background-color:#666;
+}
+#navinterne{
+	background-color:#333;
+	float:right;
+	text-transform:uppercase;
+
+	
+}
+#navinterne .derniere{
+}
+/* Navigation */
+#navigation ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+#navigation li{
+	border-top: 1px dashed #a0a0a0;
+	border-bottom: 1px dashed #d0d0d0;
+	margin: 1px;
+	padding-left: 7px;
+	padding-right: 7px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	font-size: 80%;
+}
+
+#nav ul{
+	display:inline;
+	padding:0;
+	margin:0;	
+}
+#nav li{
+	display:inline;
+	padding:5px;
+}
+
+#navigation h3{
+	margin:0.2em;
+	font-size:0.8em;	
+}
+
+/* La liste des articles */
+.liste{
+	clear:both;
+}
+ul.liste-items{
+	padding:0;
+	margin:0;	
+}
+ul.liste-items li{
+	display:block;
+	margin:0;
+	padding:0;
+}
+.introduction, .date, .sep{
+	color :#ffffff;	
+}
+h4 .sep{
+	color:#FC0;
+}
+#contenu h3{
+	margin-bottom:1ex;
+	margin-top:1ex;
+	color:#ffffff;
+	font-size:100%;	
+}
+
+/* Les trucs idiots*/
+.clear{
+	clear:both;
+}
+
+/*Calendriers + descriptifs*/
+.descriptif{
+	float:right;
+	max-width:70%;
+	
+}
+
+table.calendrier {
+	font-size:0.8em;
+	margin:1.1em 1.2em 0px;
+	color:#ffffff;
+	float:left;
+}
+
+table.calendrier caption {
+	margin:0 auto;
+}
+
+table.calendrier th {
+	color:#ffffff;
+}
+
+table.calendrier td {
+	line-height:2em;
+	width:14%;
+	text-align:center;
+	padding:0;
+}
+
+table.calendrier td a {
+	background:#AAA;
+	color:#ffffff;
+	display:block;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+table.calendrier td a:hover {
+	background:black;
+	border-bottom:none;
+}
+
+table.calendrier td.aujourdhui a {
+	background-color:#DDD;
+}
+
+table.calendrier td.mois_precedent {
+	visibility:hidden;
+}
+
+table.calendrier td.mois_suivant {
+	visibility:hidden;
+}
+
+table.calendrier td small {
+	font-size:100%;
+}
+
+.revenir_aujourdhui {
+	font-size:0.8em;
+}

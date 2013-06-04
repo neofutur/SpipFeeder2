@@ -1,0 +1,30 @@
+[(#ENV{page}|=={archive}|oui)#CACHE{24*3600*10}]
+<B_art>
+<div class="liste">
+
+#SET{total,#GRAND_TOTAL}
+<h3 class="h3"><:feeder:aujourdhui{n=#GET{total}}:></h3>
+<div class="pagination">#PAGINATION</div><br />
+<ul class="liste-items">
+<BOUCLE_art(SYNDIC_ARTICLES){id_rubrique ?}{id_syndic ?}{pagination 25}{!par date}{date > #DATE|affdate{Y-m-d 00:00:00}} {date < #DATE|affdate{Y-m-d 23:59:59}}>
+<li class="item">
+
+	<div class='cartouche'>
+	<h4 class="h4"><a href="#URL_ARTICLE" class="spip_out">#TITRE</a>[<span class='sep'>,</span> <:feed:par:> (#LESAUTEURS)]<span class='sep'>,</span> [(#DATE|affdate)]</h4>
+	<span class='date'>[(#DATE|nom_jour)] [(#DATE|affdate)]</span> 
+	<span class="sep">::</span>
+	<INCLURE{fond=inclure/infos_syndic}{id_syndic}>
+	
+	<div class="introduction">[(#DESCRIPTIF|safehtml|PtoBR)] <a class=".lire-la-suite spip_out" href="#URL_ARTICLE"><:feeder:lire_la_suite:></a> <span class='auteurs'>#LESAUTEURS</span></div>
+
+	
+	</div>
+</li>
+</BOUCLE_art>
+</ul>
+#PAGINATION
+</div>
+
+</B_art>
+<h3 class="h3"><:feeder:aujourdhuirien:></h3>
+<//B_art>

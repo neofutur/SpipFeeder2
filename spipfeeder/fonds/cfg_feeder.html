@@ -1,0 +1,28 @@
+<!-- titre= <:feeder:cfg:>-->
+<div class="formulaire_spip formulaire_feeder">
+<form action="#SELF" method="post"><div>
+[
+	(#ENV{_cfg_}|form_hidden)
+	]
+
+	<ul>
+		<li>
+			<label for="nofollow"><:feeder:cfg_nofollow:></label>
+					<input type="checkbox" name="nofollow" value="oui" id='nofollow' [(#ENV{nowfollow}|=={oui}|oui)checked="checked"] />
+				
+		</li>
+		<li>
+			<label for="futur"><:feeder:cfg_futur:></label>
+					<input type="checkbox" name="futur" value="oui" id='futur' [(#ENV{futur}|=={oui}|oui)checked="checked"] />
+				
+		</li>
+		
+		<li>
+			<label for="annee"><:feeder:cfg_annee:></label>
+			<input type="text" name="annee" id="annee" value="#ENV{annee}" />
+		</li> 
+	</ul>
+	<p class="boutons"><input type="submit" name="_cfg_ok" value="<:OK:>" />
+	<input type="submit" name="_cfg_delete" value="<:Supprimer:>" /></p>
+</div></form>
+</div>

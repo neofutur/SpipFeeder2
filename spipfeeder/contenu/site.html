@@ -1,0 +1,17 @@
+<BOUCLE_site(SITES){id_syndic}>
+#INCLURE{fond=modeles/minical/mois,date=#ENV{date},lien_navigation=#URL_PAGE{archive}|parametre_url{id_syndic,#ID_SYNDIC},id_rubrique,id_syndic}
+[<div id="desc_commun">(#CHEMIN{inclure/desc_commun}|oui)#INCLURE{fond=inclure/desc_commun}</div>]
+	<h2 class="h2">
+	<BOUCLE_rubriques(RUBRIQUES){id_rubrique}>
+	<a href="#URL_RUBRIQUE" class="spip_in">#TITRE</a>
+	</BOUCLE_rubriques>
+	<span class="sep">::</span>
+	<a href="#URL_SITE" class="spip_out">#NOM_SITE</a>
+	<span class="sep">::</span>
+	<a href="#URL_SYNDIC" class="spip_out"><:feeder:RSS:></a>
+	</h2>
+[<div class="descriptif">(#DESCRIPTIF)</div>]
+<INCLURE{fond=inclure/articles_syndics}{date=#ENV{date}}{id_syndic}>
+
+</BOUCLE_site>
+

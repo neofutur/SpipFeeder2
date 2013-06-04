@@ -1,0 +1,15 @@
+<plugin>
+
+    <nom> Spipfeeder - thème </nom>
+	<licence>GPL</licence>
+    <categorie>theme</categorie>
+    <auteur> Maïeul Rouquette et Spipeurs Neoskills </auteur>
+    <version>2.0</version>
+
+  
+    <etat>dev</etat>
+
+    <description>Thème par défaut pour SPIPFeeder</description>
+      <prefix>theme</prefix>
+	<utilise id="Z" />
+</plugin>
