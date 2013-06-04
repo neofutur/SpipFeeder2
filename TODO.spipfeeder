@@ -1,36 +1,55 @@
- menu deroulant rubriques fermees par defaut
+ priorites : 
+ 
+  1 
+ ***
 
- filtreer les rubriques en page d acceuil
+gestion de syndication :
 
- gestion de l'edito en page d acceuil + 'toutes les news du jour en lien
+* filtrer le javascipt des articles,
+* filtrer (positif ou negatif ) un fed sur un ( ou plusieurs ) mots cles
+* avoir un vrai statut archive pour les sites qui ont disparu du web
+  ( ne pas linker vers les domaines parked pleins de pubs sans rapport )
+* speedsyndic2 ne suffit plus 
+
+page d acceuil et site :
+
+* en page d acceuil, pouvoir n afficher que les articles des
+  rubriques X Y et Z et pas le reste, ou tout afficher sauf les rubriques Y et Z
+* en page d acceuil, ou site, pouvoir choisir de n afficher que les titres, un
+   apercu, ou la totalite des articles ( par defaut et per user )
+* meilleure gestion du delai d affichage, si il est 1 h du mat afficher aussi les 
+   news de la veille, plutot que _rien_
+
+base de donnees :
+
+* pouvoir purger les articles, certaines de mes bases feeder font plus de 4 GB deja
+   genre pouvoir utiliser une seconde base pour les archives de plus de 2 ans, voire meme une
+   base mysql par annee
+
+
+idees en vrac pour plus tard :
+
+ meilleure gestion du rewrite des urls pour un meilleur referencement
 
  gestion de mots clefs semi automatiques, automatiques + validation par admin =)
 
  amelioration du systeme de syndication :
    * warning si ajout d un domaine deja syndique
    * statut archive ( site mort ) remplaement des liens vers wbarchive ou wayback
-    plugin firefox pour syndic rapide
+   * plugin firefox pour syndic rapide
 
  integrer le sitemap de  http://www.spip-contrib.net/Sitemap-Google
 
  fonction recherche ( avec search flood timeout ! ) pour les membres
 
- internationaliser les messages du squelette genre "lire la suite"
+ meilleur afficheage de la rubrique en cours ( page site . . .  )
 
- verifier que le calendrier marche bien et partout + date ok
-
- pb de calendrier en page site
-
- affichage de la rubrique en cours ( page site . . .  )
-
- gestion des mots clefs
+ gestion des mots clefs sur les sites syndiques
 
  description et commentaires/forums par site ( et par mot cle ? )
+ integration de mybestbb ( https://github.com/neofutur/MyBestBB ) pour les forums
  mot cle d'exclusion de la page de garde 
  presentation edito , mise en avant de sites, par mot cle
-
-
- integrer une sitemap pour google
 
  proteger l'email contact du spam
  + faire un formulaire de contact
@@ -39,18 +58,15 @@
  admin rechercher un article de syndic
 
  systeme de check link pour bloquer les syndications dont la page web
- destination n'existe plus
+ destination n'existe plus, et les placer automatiquement en archive
 
  detection de caracteres qui puent dans les posts syndiques -> ne pas afficher
  ( et autres erreurs/pbs ? )
 
- gestion du rewrite des urls pour un meilleur referencement
  meilleure gestion du titre des pages pour un meilleur referencement
 
  importation et nettoyage des feeds rss
- /home2/virtuals/xena.ww7.be/html/20minutes/20.sh
 
  meilleures stats /par page / par site
 
- indexation des syndic_article
 
